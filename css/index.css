@@ -983,3 +983,35 @@ blockquote p {
 ::-webkit-scrollbar-thumb {
   background-color: rgba(122,130,136,0.4);
 }
+
+
+.author-details {
+  list-style-type: none;  /* Remove bullet points */
+  padding-left: 0;        /* Remove padding */
+  text-align: left;       /* Left-align text */
+}
+
+.author-details li {
+  margin-bottom: 5px;
+}
+
+.author-details i {
+  margin-right: 5px;
+}
+
+
+a {
+  color: black;       /* Set link color to black */
+  text-decoration: none;  /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline;  /* Add underline on hover */
+}
+.author-avatar .avatar-img {
+  width: auto;  /* or set to original width */
+  height: auto;  /* or set to original height */
+  border-radius: 0%; /* Makes the image square */
+}
+
+
