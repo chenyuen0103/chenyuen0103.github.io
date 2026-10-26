@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>Yuen Chen</title>
+  <meta name="description" content="Yuen Chen is a CS PhD candidate at UIUC researching causal machine learning, in-context learning, and tabular foundation models.">
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -223,7 +224,7 @@
     }
     .pub-item {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 0.75rem 1rem;
       align-items: start;
       padding: 1rem 1.1rem;
@@ -237,11 +238,11 @@
       box-shadow: 0 2px 12px color-mix(in oklch, var(--accent) 8%, transparent);
     }
     .pub-venue-badge {
-      grid-row: span 2;
+      justify-self: start;
       font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0;
       color: var(--accent);
       background: var(--accent-bg);
       padding: 0.25rem 0.5rem;
@@ -252,7 +253,7 @@
     }
     .pub-title {
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.45;
       color: var(--text);
     }
@@ -282,6 +283,18 @@
     }
     .view-all-link:hover { gap: 0.65rem; }
 
+    /* Research experience */
+    .experience-item { padding: 0.1rem 0 1.25rem; font-size: 0.9rem; }
+    .experience-item + .experience-item { border-top: 1px solid var(--border); padding-top: 1.25rem; }
+    .experience-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; }
+    .experience-heading h3 { font-size: 0.95rem; font-weight: 500; }
+    .experience-date { font-size: 0.8rem; color: var(--text-muted); }
+    .experience-mentors { color: var(--text-muted); font-size: 0.8rem; margin: 0.3rem 0 0.6rem; }
+    .experience-status { margin-top: 0.5rem; font-size: 0.8rem; font-style: italic; color: var(--text-muted); }
+    .experience-details { padding-left: 1.1rem; }
+    .experience-details li + li { margin-top: 0.35rem; }
+    .experience-paper { display: inline-block; margin-top: 0.65rem; color: var(--accent); font-size: 0.8rem; text-underline-offset: 3px; }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -302,6 +315,15 @@
       .photo-wrap { margin-bottom: 0; border-radius: 10px; }
       .sidebar-meta { align-self: center; }
       .contact-list { border-top: none; padding-top: 0; }
+    }
+    @media (max-width: 560px) {
+      .nav-inner { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.75rem; }
+    }
+    @media (max-width: 380px) {
+      .sidebar { grid-template-columns: 80px minmax(0, 1fr); gap: 1rem; }
+      .nav-links { gap: 0.65rem; }
     }
   </style>
 </head>
@@ -348,18 +370,46 @@
       <h1 class="section-title">Hi, I'm Yuen Chen</h1>
       <div class="divider"></div>
       <p class="about-text">
-        I am a CS PhD candidate at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>, advised by <a href="http://sundaram.cs.illinois.edu/" target="_blank">Prof. Hari Sundaram</a> and <a href="https://hanzhaoml.github.io/" target="_blank">Prof. Han Zhao</a>. My research focuses on <strong>causal machine learning</strong> and <strong>trustworthy machine learning</strong>.
+        I am a CS PhD candidate at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>, advised by <a href="http://sundaram.cs.illinois.edu/" target="_blank">Prof. Hari Sundaram</a> and <a href="https://hanzhaoml.github.io/" target="_blank">Prof. Han Zhao</a>. My research focuses on <strong>causal machine learning</strong> and <strong>trustworthy AI</strong>, with recent work on in-context learning and tabular foundation models.
       </p>
       <p class="about-text" style="margin-top: 0.9rem;">
-        In Summer 2025, I interned at <strong>Capital One AI Foundation</strong>. I previously interned at the <a href="https://ei.is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a> in Tübingen, Germany, working with <a href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ" target="_blank">Prof. Bernhard Schölkopf</a> and <a href="https://zhijing-jin.com/fantasy/" target="_blank">Zhijing Jin</a>. I hold a B.A. in Applied Mathematics &amp; Statistics from <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> (Dec 2022).
+        I interned with <strong>Capital One AI Foundation</strong> in summers 2025 and 2026. I previously interned at the <a href="https://ei.is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a> in Tübingen, Germany, working with <a href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ" target="_blank">Prof. Bernhard Schölkopf</a> and <a href="https://zhijing-jin.com/fantasy/" target="_blank">Zhijing Jin</a>. I hold a B.A. in Applied Mathematics &amp; Statistics from <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> (Dec 2022).
       </p>
-      <div class="tags">
-        <span class="tag">Causal Machine Learning</span>
-        <span class="tag">Domain Generalization</span>
+      <div class="tags" aria-label="Research interests">
+        <span class="tag">Causal Discovery</span>
+        <span class="tag">In-Context Learning</span>
+        <span class="tag">Tabular Foundation Models</span>
         <span class="tag">Trustworthy AI</span>
-        <span class="tag">LLM Alignment</span>
-        <span class="tag">Causal Inference</span>
       </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section class="section" aria-labelledby="experience-title">
+      <div class="section-label">Research Experience</div>
+      <h2 class="section-title" id="experience-title">Capital One AI Foundation</h2>
+      <div class="divider"></div>
+      <article class="experience-item">
+        <div class="experience-heading">
+          <h3>Applied Research Intern</h3>
+          <span class="experience-date">June 2026 – Aug 2026</span>
+        </div>
+        <p class="experience-mentors">Supervisors: Yulun Wu &amp; Nam Nguyen</p>
+        <p>Investigated in-context learning and tabular foundation model pretraining for causal discovery.</p>
+        <p class="experience-status">Manuscript in preparation; planned submission to ICML 2027.</p>
+      </article>
+      <article class="experience-item">
+        <div class="experience-heading">
+          <h3>Applied Research Intern</h3>
+          <span class="experience-date">June 2025 – August 2025</span>
+        </div>
+        <p class="experience-mentors">Mentor and manager: Rizal Fathony &amp; Nam Nguyen</p>
+        <ul class="experience-details">
+          <li>Developed BRIDGE, an end-to-end Transformer–GNN pipeline combining user event histories with relation graphs.</li>
+          <li>Designed controlled experiments across five datasets to identify when joint training improves predictions.</li>
+          <li>Improved friend recommendation quality by training user activity and social network models together.</li>
+        </ul>
+        <a class="experience-paper" href="https://openreview.net/forum?id=zbH5BBAyYW" target="_blank" rel="noopener noreferrer">Read the LoG 2026 paper <span aria-hidden="true">↗</span></a>
+      </article>
     </section>
 
     <!-- Selected Publications -->
@@ -369,37 +419,29 @@
       <div class="divider"></div>
       <div class="pub-list">
 
-        <div class="pub-item">
+        <article class="pub-item">
+          <span class="pub-venue-badge">LoG 2026</span>
+          <div class="pub-title"><a href="https://openreview.net/forum?id=zbH5BBAyYW" target="_blank" rel="noopener noreferrer">Why Freeze the Encoder? A Controlled Study of End-to-End Sequence–Graph Learning for User Behavior</a></div>
+          <div class="pub-authors"><strong>Yuen Chen</strong>, Yulun Wu, Samuel Sharpe, Igor Melnyk, Nam H. Nguyen, Furong Huang, C. Bayan Bruss, Rizal Fathony</div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-venue-badge">ICML 2026</span>
+          <div class="pub-title"><a href="https://openreview.net/forum?id=v9d4RqaPFO" target="_blank" rel="noopener noreferrer">CauSciBench: Can LLMs Automate Causal Inference in Real-World Scientific Research?</a></div>
+          <div class="pub-authors">Sawal Acharya, Terry Jingchen Zhang, Andrew Kim, Rahul Babu Shrestha, Xianlin Sun, Pepijn Cobben, Maximilian Mordig, Jacob T. Emmerson, Anahita Haghighat, Furkan Danisman, <strong>Yuen Chen</strong>, Clijo Jose, Andrei Ioan Muresanu, Justin Cui, Jiarui Liu, Yahang Qi, Punya Syon Pandey, Yinya Huang, Bernhard Schölkopf, Zhijing Jin</div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-venue-badge">Findings of ACL 2026</span>
+          <div class="pub-title"><a href="https://arxiv.org/abs/2604.14602" target="_blank" rel="noopener noreferrer">CausalDetox: Causal Head Selection and Intervention for Language Model Detoxification</a></div>
+          <div class="pub-authors">Yian Wang, <strong>Yuen Chen</strong>, Agam Goyal, Hari Sundaram</div>
+        </article>
+
+        <article class="pub-item">
           <span class="pub-venue-badge">UAI 2025</span>
-          <div class="pub-title">
-            <a href="https://proceedings.mlr.press/v286/chen25f.html" target="_blank">Moment Alignment: Unifying Gradient and Hessian Matching for Domain Generalization</a>
-          </div>
+          <div class="pub-title"><a href="https://proceedings.mlr.press/v286/chen25f.html" target="_blank" rel="noopener noreferrer">Moment Alignment: Unifying Gradient and Hessian Matching for Domain Generalization</a></div>
           <div class="pub-authors"><strong>Yuen Chen</strong>, Haozhi Si, Guojun Zhang, Han Zhao</div>
-        </div>
-
-        <div class="pub-item">
-          <span class="pub-venue-badge">EMNLP 2025</span>
-          <div class="pub-title">
-            <a href="https://aclanthology.org/2025.emnlp-main.641/" target="_blank">Breaking Bad Tokens: Detoxification of LLMs Using Sparse Autoencoders</a>
-          </div>
-          <div class="pub-authors">Agam Goyal, Vedant Rathi, William Yeh, Yian Wang, <strong>Yuen Chen</strong>, Hari Sundaram</div>
-        </div>
-
-        <div class="pub-item">
-          <span class="pub-venue-badge">NAACL 2025</span>
-          <div class="pub-title">
-            <a href="https://aclanthology.org/2025.findings-naacl.281/" target="_blank">Causally Testing Gender Bias in LLMs: A Case Study on Occupational Bias</a>
-          </div>
-          <div class="pub-authors"><strong>Yuen Chen</strong>*, Vethavikashini Chithrra Raghuram*, Justus Mattern*, Rada Mihalcea, Zhijing Jin</div>
-        </div>
-
-        <div class="pub-item">
-          <span class="pub-venue-badge">NeurIPS 2023</span>
-          <div class="pub-title">
-            <a href="https://arxiv.org/abs/2312.04350" target="_blank">CLadder: Assessing Causal Reasoning in Language Models</a>
-          </div>
-          <div class="pub-authors">Zhijing Jin*, <strong>Yuen Chen</strong>*, Felix Leeb*, Luigi Gresele*, Ojasv Kamal et al.</div>
-        </div>
+        </article>
 
       </div>
       <a href="Publications/index.html" class="view-all-link">View all publications <i class="fas fa-arrow-right"></i></a>
@@ -409,7 +451,7 @@
 </div>
 
 <footer>
-  © 2025 Yuen Chen · yuenc2@illinois.edu
+  © 2026 Yuen Chen · yuenc2@illinois.edu
 </footer>
 
 <div id="tweaks-root"></div>
