@@ -283,18 +283,6 @@
     }
     .view-all-link:hover { gap: 0.65rem; }
 
-    /* Research experience */
-    .experience-item { padding: 0.1rem 0 1.25rem; font-size: 0.9rem; }
-    .experience-item + .experience-item { border-top: 1px solid var(--border); padding-top: 1.25rem; }
-    .experience-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; }
-    .experience-heading h3 { font-size: 0.95rem; font-weight: 500; }
-    .experience-date { font-size: 0.8rem; color: var(--text-muted); }
-    .experience-mentors { color: var(--text-muted); font-size: 0.8rem; margin: 0.3rem 0 0.6rem; }
-    .experience-status { margin-top: 0.5rem; font-size: 0.8rem; font-style: italic; color: var(--text-muted); }
-    .experience-details { padding-left: 1.1rem; }
-    .experience-details li + li { margin-top: 0.35rem; }
-    .experience-paper { display: inline-block; margin-top: 0.65rem; color: var(--accent); font-size: 0.8rem; text-underline-offset: 3px; }
-
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -370,10 +358,13 @@
       <h1 class="section-title">Hi, I'm Yuen Chen</h1>
       <div class="divider"></div>
       <p class="about-text">
-        I am a CS PhD candidate at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>, advised by <a href="http://sundaram.cs.illinois.edu/" target="_blank">Prof. Hari Sundaram</a> and <a href="https://hanzhaoml.github.io/" target="_blank">Prof. Han Zhao</a>. My research focuses on <strong>causal machine learning</strong> and <strong>trustworthy AI</strong>, with recent work on in-context learning and tabular foundation models.
+        I am a CS PhD candidate at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>, advised by <a href="http://sundaram.cs.illinois.edu/" target="_blank">Prof. Hari Sundaram</a> and <a href="https://hanzhaoml.github.io/" target="_blank">Prof. Han Zhao</a>. My research focuses on <strong>causal machine learning</strong> and <strong>trustworthy AI</strong>.
       </p>
       <p class="about-text" style="margin-top: 0.9rem;">
-        I interned with <strong>Capital One AI Foundation</strong> in summers 2025 and 2026. I previously interned at the <a href="https://ei.is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a> in Tübingen, Germany, working with <a href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ" target="_blank">Prof. Bernhard Schölkopf</a> and <a href="https://zhijing-jin.com/fantasy/" target="_blank">Zhijing Jin</a>. I hold a B.A. in Applied Mathematics &amp; Statistics from <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> (Dec 2022).
+        At <strong>Capital One AI Foundation</strong>, I explored in-context learning and tabular foundation model pretraining for causal discovery in summer 2026. In summer 2025, I studied how learning jointly from user activity and social networks improves predictions, leading to our <a href="https://openreview.net/forum?id=zbH5BBAyYW" target="_blank" rel="noopener noreferrer">LoG 2026 paper</a>.
+      </p>
+      <p class="about-text" style="margin-top: 0.9rem;">
+        I previously interned at the <a href="https://ei.is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a> in Tübingen, Germany, working with <a href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ" target="_blank">Prof. Bernhard Schölkopf</a> and <a href="https://zhijing-jin.com/fantasy/" target="_blank">Zhijing Jin</a>. I hold a B.A. in Applied Mathematics &amp; Statistics from <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> (Dec 2022).
       </p>
       <div class="tags" aria-label="Research interests">
         <span class="tag">Causal Discovery</span>
@@ -381,35 +372,6 @@
         <span class="tag">Tabular Foundation Models</span>
         <span class="tag">Trustworthy AI</span>
       </div>
-    </section>
-
-    <!-- Research Experience -->
-    <section class="section" aria-labelledby="experience-title">
-      <div class="section-label">Research Experience</div>
-      <h2 class="section-title" id="experience-title">Capital One AI Foundation</h2>
-      <div class="divider"></div>
-      <article class="experience-item">
-        <div class="experience-heading">
-          <h3>Applied Research Intern</h3>
-          <span class="experience-date">June 2026 – Aug 2026</span>
-        </div>
-        <p class="experience-mentors">Supervisors: Yulun Wu &amp; Nam Nguyen</p>
-        <p>Investigated in-context learning and tabular foundation model pretraining for causal discovery.</p>
-        <p class="experience-status">Manuscript in preparation; planned submission to ICML 2027.</p>
-      </article>
-      <article class="experience-item">
-        <div class="experience-heading">
-          <h3>Applied Research Intern</h3>
-          <span class="experience-date">June 2025 – August 2025</span>
-        </div>
-        <p class="experience-mentors">Mentor and manager: Rizal Fathony &amp; Nam Nguyen</p>
-        <ul class="experience-details">
-          <li>Developed BRIDGE, an end-to-end Transformer–GNN pipeline combining user event histories with relation graphs.</li>
-          <li>Designed controlled experiments across five datasets to identify when joint training improves predictions.</li>
-          <li>Improved friend recommendation quality by training user activity and social network models together.</li>
-        </ul>
-        <a class="experience-paper" href="https://openreview.net/forum?id=zbH5BBAyYW" target="_blank" rel="noopener noreferrer">Read the LoG 2026 paper <span aria-hidden="true">↗</span></a>
-      </article>
     </section>
 
     <!-- Selected Publications -->
